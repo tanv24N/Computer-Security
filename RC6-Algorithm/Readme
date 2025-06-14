@@ -1,1 +1,21 @@
+Algorithm description->
+ 
+This C++ code implements the RC6 algorithm and can be used to encrypt and decrypt data.
 
+1. w, r, byte_var: Constants defining the word size, number of rounds, and number of bytes per word.
+2. c: A macro to calculate the number of words needed for the key.
+3. r_var, lgw_var: Constants used in the RC6 algorithm.
+4. rotate_left and rotate_right: Macros for circular left and right shifts.
+5. s_var: An array to store the expanded key schedule.
+6. Key Schedule Function (key_schedule): Generates the key schedule for RC6 based on the input key.
+7. Encryption Function (encryption_rc6): Performs RC6 encryption on a 128-bit block of plaintext.
+8. Decryption Function (decryption_rc6): Performs RC6 decryption on a 128-bit block of ciphertext.
+9. Formatting and File I/O Functions: formate_encryption_decryption: Converts 32-bit integers to 
+hexadecimal format and writes them to a file. The program reads input data from an
+input file, performs either encryption or decryption based on the specified mode, and writes the result to an output file.
+10. Main Function: Parses command-line arguments for input and output file names.
+Reads the encryption/decryption mode and input data from the input file. 
+Performs either encryption or decryption based on the mode. Writes the result to the output file.
+
+Commands to execute-> g++ -o run CSProject1.cpp
+	                ./run input.txt output.txt
